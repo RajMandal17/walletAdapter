@@ -18,12 +18,12 @@ export function SignMessage() {
         alert('success', `Message signature: ${bs58.encode(signature)}`);
     };
 
+    // Inside SignMessage component
     return (
-        <div>
+        <div className="form-section">
+            <p>Sign a Message</p>
             <input id="message" type="text" placeholder="Message" />
-            <button onClick={onClick}>
-                Sign Message
-            </button>
+            <button onClick={onClick}>Sign Message</button>
         </div>
     );
 };

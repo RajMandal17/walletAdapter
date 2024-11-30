@@ -1,10 +1,11 @@
+// Inside SendTokens component
+import React from 'react';
 import { useConnection, useWallet } from "@solana/wallet-adapter-react"
-import { LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction} from "@solana/web3.js";
-
+import { LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction } from "@solana/web3.js";
 
 export function SendTokens() {
     const wallet = useWallet();
-    const {connection} = useConnection();
+    const { connection } = useConnection();
 
     async function sendTokens() {
         let to = document.getElementById("to").value;
@@ -20,9 +21,12 @@ export function SendTokens() {
         alert("Sent " + amount + " SOL to " + to);
     }
 
-    return <div>
-        <input id="to" type="text" placeholder="To" />
-        <input id="amount" type="text" placeholder="Amount" />
-        <button onClick={sendTokens}>Send</button>
-    </div>
+    return (
+        <div className="form-section">
+            <p>Send Tokens</p>
+            <input id="to" type="text" placeholder="Recipient Address" />
+            <input id="amount" type="text" placeholder="Amount (SOL)" />
+            <button onClick={sendTokens}>Send</button>
+        </div>
+    );
 }
