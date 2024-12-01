@@ -1,0 +1,64 @@
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Vite cache
+.vite/
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Mac system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# IDE directories
+.idea/
+.vscode/
+
+# Other config directories
+*.iml
+
+# Local history for JetBrains IDEs
+/local-history/
+
+# Coverage directory used by testing tools
+coverage/
+
+# TypeScript cache
+/*.tsbuildinfo
+
+# ESLint cache
+eslintcache
+
+# Parcel-bundler cache (or similar bundling tools)
+.parcel-cache/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Jest cache and config
+jest/
+.jest/
+
+# Ignore any local files created by npm link or yarn link
+*.tgz
+
+# Yarn / Npm lock files
+.pnpm-store/
+.pnp.*
+yarn.lock
+package-lock.json
